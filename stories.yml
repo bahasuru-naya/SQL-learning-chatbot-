@@ -1,0 +1,73 @@
+version: "3.1"
+
+stories:
+
+- story: Greet when the user greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: Show all Table anytime the user asks
+  steps:
+  - intent: show_all_tables
+  - action: action_show_all_tables
+
+- story: Show Table anytime the user asks
+  steps:
+  - intent: show_table
+  - action: action_show_table
+
+- story: add items anytime the user asks to stock
+  steps:
+  - intent: add_items_stock
+  - action: action_add_items_stock
+
+- story: update items anytime the user asks to stock
+  steps:
+  - intent: update_items_stock
+  - action: action_update_items_stock
+
+- story: delete items anytime the user asks from stock
+  steps:
+  - intent: delete_items_stock
+  - action: action_delete_items_stock
+
+- story: add items anytime the user asks to price
+  steps:
+  - intent: add_items_price
+  - action: action_add_items_price
+
+- story: update items anytime the user asks to price
+  steps:
+  - intent: update_items_price
+  - action: action_update_items_price
+
+- story: delete items anytime the user asks from price
+  steps:
+  - intent: delete_items_price
+  - action: action_delete_items_price
+
+- story: add items anytime the user asks to sales
+  steps:
+  - intent: add_items_sales
+  - action: action_add_items_sales
+
+- story: update items anytime the user asks to sales
+  steps:
+  - intent: update_items_sales
+  - action: action_update_items_sales
+
+- story: delete items anytime the user asks from sales
+  steps:
+  - intent: delete_items_sales
+  - action: action_delete_items_sales
+
+- story: retrieve data anytime the user asks
+  steps:
+  - intent: retrieve_specific_data_from_tables
+  - action: action_retrieve_data_from_tables
+
+- story: Say goodbye the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye

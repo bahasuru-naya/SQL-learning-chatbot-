@@ -1,0 +1,567 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - good morning
+    - good evening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: show_all_tables
+  examples: |
+    - show all tables
+    - show every table in database
+    - show  me all tables with names
+    - view all tables
+    - list all tables
+    - display all tables
+    - show the tables present in database
+    - list every table available
+    - fetch all tables from database
+    - retrieve the list of tables
+    - get me the tables in the database
+    - what are the tables available?
+    - I want to see all tables
+    - print all table names    
+    - fetch table list
+    - display database tables
+    - enumerate all tables
+    - show database tables    
+    - bring up all tables
+    - load all table names
+    - find all tables in database
+    - I need the table list
+    - tell me the tables present
+    - get me every table in system
+    - fetch database structure    
+    - let me see all tables
+    - reveal all table names     
+    - return all database tables
+
+- intent: show_table
+  examples: |
+    - show [stock](table_name)
+    - show table [price](table_name)
+    - table [sales](table_name)
+    - view table [sales](table_name)
+    - view [stock](table_name)
+    - show me [stock](table_name)
+    - show me table [price](table_name)
+    - show me details of [price](table_name)
+    - show records from [sales](table_name)
+    - list everything in [price](table_name)
+    - display full table [sales](table_name)
+    - open [price](table_name) table
+    - fetch all data from [stock](table_name)
+    - I need to see [price](table_name)
+    - show me [stock](table_name) details
+    - display content of [suppliers](table_name)
+    - retrieve data from [sales](table_name)
+    - can you show [sales](table_name)?
+    - view all data from [price](table_name)
+    - get details of [sales](table_name)
+    - bring up [price](table_name)
+    - pull all records from [stock](table_name)
+    - find and load [sales](table_name)
+    - show structure of [stock](table_name)
+    - show every row in [stock](table_name)
+    - present all values from [price](table_name)
+    - get all records of [projects](table_name)
+    - extract data from [sales](table_name)
+    - load table [stock](table_name)
+    - reveal [price](table_name) data
+    - return all entries of [sales](table_name)
+    - print details from [stock](table_name)
+    - access complete table [price](table_name)
+    - let me see [sales](table_name)
+    - view all rows of [stock](table_name)
+    - show me the full data of [sales](table_name)
+    - get complete details of [stock](table_name)
+    
+
+- intent: add_items_stock
+  examples: |
+    - add [monitor](item_name) and [240](quantity)
+    - insert [mouse](item_name) and [4](quantity)
+    - add [camera](item_name) and [10](quantity) to [stock](table_name) 
+    - add [phone](item_name) and [24](quantity) to [stock](table_name)
+    - add [charger](item_name) and [55](quantity) to [stock](table_name)
+    - insert [pen drive](item_name) and [556](quantity) to [stock](table_name)
+    - add [CD drive](item_name) and [96](quantity) to [stock](table_name) 
+    - add [table fan](item_name) and [25](quantity)
+    - insert [webcam](item_name) and [5](quantity)
+    - insert [Bluetooth adapter](item_name) and [20](quantity) to [stock](table_name)
+    - intent: add_items_stock  
+    - add [keyboard](item_name) and [50](quantity) to [stock](table_name)
+    - insert [wireless mouse](item_name) and [20](quantity) in [stock](table_name)
+    - stock [gaming laptop](item_name) with [15](quantity) units
+    - update inventory: add [external hard drive](item_name) and [30](quantity)
+    - put [monitor stand](item_name) with [40](quantity) into [stock](table_name)
+    - include [printer](item_name) and [12](quantity) in warehouse stock
+    - add stock entry: [router](item_name), [25](quantity)
+    - log [USB hub](item_name) with [60](quantity) into [stock](table_name)
+    - store new inventory: [tablet](item_name), [22](quantity) units
+    - insert [headphones](item_name) and [100](quantity) into [stock](table_name)
+    - stock up on [graphic card](item_name) with [35](quantity)
+    - add [gaming chair](item_name) with [18](quantity) to stock
+    - place [HDMI cable](item_name) and [150](quantity) into inventory    
+    - enter stock for [mechanical keyboard](item_name): [75](quantity)
+    - log inventory addition: [desk lamp](item_name), [90](quantity)
+    - insert [webcam](item_name) with [55](quantity) into warehouse
+    - put [TV](item_name) with [10](quantity) in [stock](table_name)
+    - add [power bank](item_name) and [60](quantity) units
+    - increase [game console](item_name) inventory by [8](quantity)
+    - insert new [air purifier](item_name) stock with [20](quantity)
+    - store [security camera](item_name) and [33](quantity) in warehouse
+    - stock with [tablet stand](item_name), quantity [44](quantity)
+    - add [VR headset](item_name) with [16](quantity) into stock
+    - insert [external SSD](item_name) of [88](quantity) into inventory
+    - log stock: [soundbar](item_name), [12](quantity) added
+    - store new shipment: [smart bulb](item_name), [95](quantity) units
+    - update stock for [flash drive](item_name), adding [200](quantity)
+    - insert [gaming monitor](item_name) and [27](quantity) into database
+    - add [wireless charger](item_name) and [110](quantity) to stock
+
+
+
+- lookup: item_name
+  examples: |    
+    - Lenovo IdeaPad Flex 5
+    - Intel i3
+    - Intel i5     
+    - Logitech M187
+    - Macbook M2 air
+    - Samsung Galaxy S24
+    - Nokia 105  
+    - Intel i7  
+    - Dell XPS 13
+    - Apple MacBook Air M1
+    - HP Pavilion Gaming Laptop
+    - Dell Inspiron 15 3000
+    - Logitech MX Master 3 Mouse
+    - Corsair K95 RGB Mechanical Keyboard
+    - Lenovo ThinkPad T14s
+    - Samsung 970 EVO Plus SSD 1TB
+    - Acer Predator Helios 300
+    - Asus ROG Strix G15
+    - Microsoft Surface Go 3
+    - Razer Blade 15 Advanced
+    - Apple iMac 24-inch M1
+    - Seagate Barracuda 2TB HDD
+    - Kingston A2000 NVMe SSD 500GB
+    - Corsair Vengeance LPX 16GB DDR4 RAM
+    - Acer Aspire 5
+    - Logitech G Pro X Gaming Headset
+    - HP Omen 25L Gaming Desktop
+    - Samsung Odyssey G7 27-inch Monitor
+    - TP-Link Archer AX50 Wi-Fi 6 Router
+
+- intent: update_items_stock
+  examples: |
+    - update [keyboard](item_name) and [50](quantity) where item id [3](id) in [stock](table_name).
+    - modify [wireless mouse](item_name) to [20](quantity) where item id [7](id) in [stock](table_name).
+    - change [gaming laptop](item_name)  where item id [10](id).
+    - set [external hard drive](item_name) stock to [30](quantity) where id [5](id) in [stock](table_name).
+    - update [monitor stand](item_name) with new quantity [40](quantity) where id [12](id).
+    - revise [printer](item_name) stock count to [12](quantity) where id [4](id) in [stock](table_name).
+    - adjust inventory: change [router](item_name) quantity to [25](quantity) where id [9](id).
+    - modify [USB hub](item_name) to have [60](quantity) in [stock](table_name), item id [6](id).
+    - set [tablet](item_name) quantity to [22](quantity) where id [8](id) in warehouse stock.
+    - update [headphones](item_name) stock to [100](quantity) where id [14](id).
+    - update available stock of [graphic card](item_name) to [35](quantity) where id [15](id).
+    - adjust [gaming chair](item_name) inventory to [18](quantity) where id [18](id).
+    - modify [HDMI cable](item_name) count to [150](quantity) where id [20](id).
+    - set [smartwatch](item_name) stock level to [45](quantity) where id [13](id).
+    - change [mechanical keyboard](item_name) quantity to [75](quantity) in [stock](table_name), id [16](id).
+    - correct inventory: update [desk lamp](item_name) to [90](quantity), id [21](id).
+    - revise [webcam](item_name) stock value to [55](quantity) where id [11](id).
+    - increase stock of [TV](item_name) to [10](quantity) where item id is [25](id).
+    - modify [power bank](item_name) count to [60](quantity) where id [30](id).
+    - update stock entry: [game console](item_name) to [8](quantity), id [35](id).
+    - revise inventory: set [air purifier](item_name) quantity to [20](quantity) where id [40](id).
+    - adjust warehouse records: [security camera](item_name) to [33](quantity), id [45](id).
+    - correct stock for [tablet stand](item_name) to [44](quantity) where id [50](id).
+    - update [VR headset](item_name) quantity to [16](quantity) in [stock](table_name), id [55](id).
+    - update [external SSD](item_name) with new quantity [88](quantity), id [60](id).
+    - change [soundbar](item_name) where id [65](id).
+    - adjust [smart bulb](item_name) to [95](quantity) where id [70](id).
+    - revise [flash drive](item_name) quantity to [200](quantity), id [75](id).
+    - modify stock of [gaming monitor](item_name) to [27](quantity) where id [80](id).
+    - update [wireless charger](item_name) to [110](quantity) where id [85](id) in inventory.
+
+- intent: add_items_price
+  examples: |
+    - insert [2](id) and [44000.50](price)
+    - add [1](id) and [1960.00](price)
+    - add [3](id) and [960.00](price) to [price](table_name)
+    - add [4](id) and [40000.00](price) to [price](table_name)
+    - insert [51](id) and [9230.00](price) to [price](table_name)
+    - add [6](id) and [24000.00](price) to [price](table_name)
+    - insert price record for item [1](id) at [349.99](price)
+    - add new item: ID [5](id) with price [899.49](price)
+    - update database: product [2](id), cost set to [1299.99](price)
+    - register new price: [6](id) priced at [759.00](price)
+    - insert price for [9](id), new cost: [1450.75](price)
+    - input price data: [3](id), [425.00](price)
+    - add price entry: ID [12](id), value: [2300.99](price)
+    - record [7](id) with pricing at [529.50](price)   
+    - store new price: [18](id) at [899.99](price)
+    - input into [price](table_name): [4](id), [349.00](price)
+    - add transaction for [8](id) with price set to [1750.99](price)
+    - register sale price: [10](id), latest cost: [1599.49](price)
+    - insert [13](id) with cost of [499.99](price)    
+    - add to price table: [21](id), new price [2400.99](price)
+    - track price change: [22](id), adjusted to [1800.49](price)
+    - save price data for [16](id): [325.75](price)
+    - add [14](id), price [650.00](price), into records
+    - insert into database: ID [27](id), [745.99](price)
+    - add item pricing: [11](id), updated to [1325.25](price)
+    - document price change: [17](id) now [2850.00](price)
+    - update stock value: [19](id), priced at [899.49](price)
+    - log price for [23](id): [159.99](price)
+    - save cost update: [25](id), current rate [320.00](price)
+    - insert [30](id) with adjusted price of [2199.99](price)
+    - track item [24](id), setting cost to [1050.75](price)
+    - add price entry: [28](id), marked at [1399.50](price)
+    - store [26](id) pricing at [699.99](price)
+    - input price record: [29](id), set to [2000.00](price)
+
+
+- intent: update_items_price
+  examples: |
+    - update [1960.00](price) where [29](id) in [price](table_name)
+    - update [2450.75](price) where [10](id) in [price](table_name).
+    - modify price to [3199.99](price) for item with id [15](id) in [price](table_name).
+    - change the price to [5600.50](price) for product with id [22](id).
+    - set [499.99](price) where item id is [8](id) in [price](table_name).
+    - update cost to [1399.00](price) for item id [33](id) in pricing records.
+    - revise price to [950.25](price) for product id [4](id) in [price](table_name).
+    - adjust [199.99](price) where item id [21](id) is recorded in [price](table_name).
+    - modify [879.49](price) where product ID is [12](id).
+    - update [3420.80](price) where id is [7](id) in [price](table_name).
+    - update price entry to [712.00](price) for id [19](id).
+    - revise cost of item [5](id) to [50.99](price) in [price](table_name).
+    - adjust price of id [28](id) to [1049.95](price) in database.
+    - update listed price for item id [36](id) to [15000.00](price).
+    - correct price to [5800.75](price) where id is [9](id).
+    - modify pricing record: set [2299.90](price) where id [31](id).
+    - change cost to [725.60](price) for item [14](id) in [price](table_name).
+    - update the amount to [189.99](price) for product id [3](id).
+    - set the new price at [399.95](price) for item [18](id).
+    - update [7899.50](price) where id [41](id) in price records.
+    - adjust pricing of item [27](id) to [559.00](price).
+    - revise the cost to [6700.20](price) for product id [20](id).
+    - update [980.00](price) where id [45](id) in [price](table_name).
+    - modify product price to [12000.00](price) for id [60](id).
+    - set the latest price at [275.45](price) where id is [50](id).
+    - update cost details to [1899.99](price) for item id [55](id).
+    - correct entry: change [130.75](price) where id [6](id) is recorded.
+    - change the price tag to [3750.25](price) for id [11](id).
+    - update listing: set [9600.80](price) where id [32](id).
+    - revise pricing for item [40](id) to [2450.00](price).
+    - adjust [670.50](price) for product id [29](id) in [price](table_name).
+  
+
+- intent: add_items_sales
+  examples: |
+    - add [9](id) and [34](sales) and [2025-10-3](date)
+    - insert [7](id) and [53](sales) and [2025-1-3](date)
+    - add [1](id) and [9](sales) and [2022-10-3](date) to [sales](table_name)
+    - add [2](id) and [289](sales) and [2024-12-31](date) to [sales](table_name)
+    - insert [3](id) and [25](sales) and [2021-1-15](date) to [sales](table_name)
+    - add [10](id) and [135](sales) and [2021-7-20](date) to [sales](table_name)
+    - record sale of [1](id) with [25](sales) units on [2023-06-11](date)
+    - insert sale entry: [2](id), [78](sales), [2024-09-15](date)
+    - log sale: [5](id), [33](sales), [2025-10-30](date)
+    - add transaction for [8](id) - [12](sales) units, sold on [2022-11-02](date)
+    - register [9](id) sold [56](sales) units on [2023-01-20](date)
+    - input new sale: [12](id), [90](sales), [2024-05-05](date)
+    - insert [3](id) with [47](sales) on [2023-07-18](date) in [sales](table_name)
+    - store sales data: [6](id), [70](sales), sold on [2025-02-12](date)
+    - record order: [15](id), [32](sales) items, transaction date: [2021-12-03](date)
+    - new sales entry for [4](id): [18](sales) units, [2023-09-07](date)
+    - add sale record for product [11](id): sold [99](sales) on [2024-10-10](date)
+    - document [7](id) as [24](sales) on [2023-11-22](date)
+    - save [10](id), [54](sales), [2024-03-29](date) into [sales](table_name)    
+    - insert [14](id), sold [41](sales), [2025-01-01](date)
+    - log purchase: item ID [17](id) had [62](sales) on [2024-04-17](date)
+    - store sale record: [19](id), [145](sales), [2025-06-28](date)
+    - register transaction for [22](id): [76](sales) units, sold [2023-12-05](date)
+    - input: [23](id), [34](sales), sold [2022-07-15](date)
+    - add item [27](id) with sales [120](sales), date: [2021-10-25](date)
+    - transaction log: [29](id), [200](sales), sold on [2024-12-20](date)
+    - document [16](id), [19](sales), [2023-05-30](date)
+    - insert [30](id), [150](sales), sold on [2025-09-09](date)
+    - add to records: [18](id), [92](sales), [2024-06-11](date)
+    - insert [25](id), [57](sales), [2023-02-08](date)
+    - save sale: [28](id), [80](sales), sold on [2025-03-07](date)
+    - log order: [21](id), [44](sales), [2022-08-18](date)
+    - store [26](id), [68](sales), [2023-10-02](date)
+    - add [24](id), [79](sales), [2024-07-21](date)
+    - track [20](id), [61](sales), [2025-04-19](date)
+
+
+- intent: update_items_sales
+  examples: |
+    - update [1](id) and [9](sales) and [2022-10-3](date) where [16](sale_id) in [sales](table_name)
+    - update [2](id)  and [2021-12-3](date) where [13](sale_id) in [sales](table_name)
+    - update [2023-12-3](date) where [9](sale_id) 
+    - update [3](id) and [15](sales) and [2021-08-15](date) where [20](sale_id) in [sales](table_name).
+    - modify [5](id) and [25](sales) and [2023-05-20](date) where [11](sale_id) in [sales](table_name).
+    - change sales entry to [7](id) and [18](sales) and [2022-07-09](date) where [14](sale_id) in [sales](table_name).
+    - set [10](sales) and [2024-02-01](date) where [19](sale_id) in [sales](table_name).
+    - update [6](id) and [8](sales) and [2020-11-11](date) where [15](sale_id).
+    - revise sales record: set [9](id) and [22](sales) and [2023-09-30](date) where [25](sale_id).
+    - adjust sales details to [12](id) and [30](sales) and [2022-06-06](date) where [5](sale_id).
+    - modify sale record: update [15](sales) and [2025-04-10](date) where [28](sale_id).
+    - correct entry: change [20](id) and [50](sales) and [2021-12-12](date) where [30](sale_id).
+    - update [17](id) and [40](sales) where [35](sale_id) in [sales](table_name).
+    - update [11](id) and [90](sales) and [2020-05-14](date) where [45](sale_id) in [sales](table_name).
+    - set [22](id) and [200](sales) where [50](sale_id) in [sales](table_name).
+    - change sales count to [110](sales) where [12](sale_id) in [sales](table_name).
+    - modify [5](id) and [2022-01-05](date) where [23](sale_id) in [sales](table_name).
+    - adjust sale date to [2023-03-15](date) where [16](sale_id) in [sales](table_name).
+    - revise sales data: update [18](id) and [74](sales) and [2023-08-21](date) where [8](sale_id).
+    - correct sales log: set [14](id) and [120](sales) where [27](sale_id) in [sales](table_name).
+    - update [7](id) and [9](sales) where [33](sale_id) in [sales](table_name).
+    - modify sales entry: change to [26](id) and [42](sales) and [2025-10-31](date) where [22](sale_id).
+    - update [30](id) and [200](sales) and [2022-12-25](date) where [60](sale_id).
+    - revise [19](id) and [60](sales) and [2024-01-19](date) where [65](sale_id) in [sales](table_name).
+    - update [9](id) and [99](sales) and [2023-06-28](date) where [70](sale_id) in [sales](table_name).
+    - change sales details to [2](id) and [33](sales) and [2021-09-05](date) where [75](sale_id).
+    - update [10](id) and [55](sales) where [80](sale_id) in [sales](table_name).
+    - adjust sale record: modify [16](id) and [88](sales) and [2020-04-01](date) where [85](sale_id).
+    - correct [21](id) and [70](sales) and [2025-02-20](date) where [90](sale_id) in [sales](table_name).
+    - update sales data: set [13](id) and [30](sales) where [95](sale_id).
+    - update sale entry to [5](id) and [20](sales) where [100](sale_id) in [sales](table_name).
+    - modify [8](id) and [15](sales) and [2022-11-18](date) where [110](sale_id).
+    - revise [4](id) and [60](sales) and [2024-07-14](date) where [120](sale_id) in [sales](table_name).
+
+- intent: delete_items_stock
+  examples: |
+    - remove [12](id) from [stock](table_name)
+    - delete item id [1](id) from [stock](table_name)
+    - remove item ID [22](id) from [stock](table_name)
+    - delete [camera](item_name) and [10](quantity) from [stock](table_name) 
+    - delete [phone](item_name) and [24](quantity) from [stock](table_name)
+    - remove [charger](item_name) and [55](quantity) from [stock](table_name)
+    - delete [pen drive](item_name) and [556](quantity) from [stock](table_name)
+    - delete [CD drive](item_name) and [96](quantity) from [stock](table_name)
+    - remove [15](id) from [stock](table_name)
+    - delete stock entry for item ID [3](id)
+    - remove [6](id) from [stock](table_name)
+    - delete [keyboard](item_name) and [10](quantity) from [stock](table_name)
+    - erase [mouse](item_name) and [5](quantity) from [stock](table_name)
+    - remove [tablet](item_name) and [8](quantity) from [stock](table_name)
+    - delete stock record for item ID [9](id)
+    - remove [phone](item_name) and [20](quantity) from [stock](table_name)
+    - clear stock data of ID [17](id)
+    - delete inventory record for ID [21](id)
+    - discard [laptop](item_name) and [4](quantity) from [stock](table_name)
+    - eliminate [speakers](item_name) and [7](quantity) from [stock](table_name)
+    - delete stock info for [modem](item_name)
+    - remove outdated stock details for ID [33](id)
+    - erase older stock entry with ID [28](id)
+    - clear out inventory record for ID [40](id)
+    - delete remaining stock record of ID [43](id)
+    - purge [USB cable](item_name) and [50](quantity)
+    - delete stored entry for ID [49](id)
+    - remove past inventory data for ID [52](id)
+    - discard outdated stock record [56](id)
+    - delete previous stock of item ID [58](id)
+    - clear remaining stock record of [60](id)
+    - erase historical inventory entry for ID [63](id)
+    - delete old warehouse stock record for ID [65](id)
+    - remove previous stock tracking record for ID [67](id)
+    - delete [headphones](item_name) and [30](quantity) from [stock](table_name)
+    - erase [monitor stand](item_name) and [12](quantity) from [stock](table_name)
+    - delete [dock station](item_name) and [14](quantity) from [stock](table_name)
+    - remove [wireless charger](item_name) and [9](quantity) from [stock](table_name)
+
+- intent: delete_items_price
+  examples: |
+    - remove [1](id) from [price](table_name)
+    - delete item id [1](id) from [price](table_name)
+    - remove item ID [22](id) from [price](table_name)
+    - delete [1](id) and [960.00](price) from [price](table_name)
+    - delete [4](id) and [40000.00](price) from [price](table_name)
+    - remove [5](id) and [9230.00](price) from [price](table_name)
+    - delete [6](id) and [24000.00](price) from [price](table_name)
+    - remove [1](id) from [price](table_name)
+    - delete price entry for item ID [4](id)
+    - remove price for item ID [12](id) from [price](table_name)
+    - delete [9](id) and [459.00](price) from [price](table_name)
+    - erase record of [7](id) and [299.99](price) from [price](table_name)
+    - remove [11](id) and [899.00](price) from [price](table_name)
+    - delete item price for ID [5](id) from [price](table_name)
+    - remove price entry with ID [17](id)
+    - delete cost for item ID [3](id)
+    - purge [price](table_name) entry for product ID [19](id)
+    - clear pricing data of ID [21](id)
+    - erase price details for item ID [15](id)
+    - delete historical price of ID [13](id)
+    - remove cost details for [27](id)
+    - discard price log for ID [29](id)
+    - delete price record of ID [31](id)
+    - clear product cost of ID [22](id)
+    - eliminate price entry for ID [25](id)
+    - remove outdated price entry of ID [34](id)
+    - delete price of item ID [38](id)
+    - erase pricing info for [40](id)
+    - delete the pricing record of [42](id)
+    - remove older pricing data of [44](id)
+    - discard [46](id) and its price details
+    - erase cost log for product [48](id)
+    - delete previous price for item [50](id)
+    - remove the cost record for ID [52](id)
+    - delete pricing structure for item [54](id)
+    - clear price log for [56](id)
+    - erase past pricing data for ID [58](id)
+    
+
+- intent: delete_items_sales
+  examples: |
+    - remove [16](sale_id) from [sales](table_name)
+    - delete sale id [6](sale_id) from [sales](table_name)
+    - remove sale ID [11](sale_id) from [sales](table_name)
+    - delete [1](id) and [9](sales) and [2022-10-3](date) from [sales](table_name)
+    - remove [2](id) and [289](sales) and [2024-12-31](date) from [sales](table_name)
+    - delete [3](id) and [25](sales) and [2021-1-15](date) from [sales](table_name)
+    - delete [4](id) and [135](sales) and [2021-7-20](date) from [sales](table_name)
+    - remove [5](sale_id) from [sales](table_name)
+    - delete sale id [8](sale_id) from [sales](table_name)
+    - remove sale ID [14](sale_id) from [sales](table_name)
+    - delete [2](id) and [19](sales) and [2023-09-12](date) from [sales](table_name)
+    - remove [7](id) and [89](sales) and [2022-05-23](date) from [sales](table_name)
+    - delete [10](id) and [45](sales) and [2021-08-15](date) from [sales](table_name)
+    - delete [6](id) and [78](sales) and [2020-12-01](date) from [sales](table_name)
+    - remove [15](id) and [35](sales) and [2024-06-20](date) from [sales](table_name)
+    - delete [4](id) and [23](sales) and [2021-07-30](date) from [sales](table_name)
+    - delete sale record with ID [21](sale_id)
+    - erase sale data with sale ID [17](sale_id)
+    - remove transaction [19](sale_id) from [sales](table_name)
+    - delete record with ID [25](sale_id) from sales
+    - purge sale entry [12](sale_id) from [sales](table_name)
+    - clear sale with ID [9](sale_id)
+    - eliminate sale entry [3](sale_id) from database
+    - erase sales info of ID [22](sale_id)
+    - remove sale transaction ID [30](sale_id)
+    - delete all records for sale ID [27](sale_id)
+    - clear out sales log for ID [18](sale_id)
+    - delete entry with sale ID [31](sale_id)
+    - remove sales transaction [11](sale_id)
+    - erase sales history for ID [29](sale_id)
+    - discard sale record [13](sale_id)
+    - delete historical sale entry [16](sale_id)
+    - remove sales data with ID [28](sale_id)
+    - delete older sales entry with sale ID [26](sale_id)
+    - erase sales figure for ID [32](sale_id)
+    - remove past sale with sale ID [34](sale_id)
+    - delete sales ID [33](sale_id) permanently
+
+
+
+
+- intent: retrieve_specific_data_from_tables
+  examples: |
+    - show details about [items](table1) where [sales](table2) [>32](condition).
+    - show details about [items](table1) where [price](table2) [<25000](condition).
+    - show details about [items](table1) where [sales](table2) [=45](condition).
+    - show details about [items](table1) where [sales](table2) [=100](condition)
+    - show details about [items](table1) where [price](table2) [<402.00](condition).
+    - show details about [items](table1) where [price](table2) [=724.00](condition).    
+    - show details about [sales](table1) of each [items](table2)
+    - show details about [price](table1) of each [items](table2).
+    - show details about [stock](table1) where [sales](table2) [>50](condition).
+    - show details about [stock](table1) where [price](table2) [<15000](condition).
+    - show details about [sales](table1) where [stock](table2) [>20](condition).
+    - show details about [sales](table1) where [price](table2) [=299.99](condition).
+    - show details about [price](table1) where [stock](table2) [=100](condition).
+    - show details about [price](table1) where [sales](table2) [=500](condition).
+    - retrieve details of [stock](table1) where [price](table2) [>9999](condition).
+    - get data from [sales](table1) where [stock](table2) [<10](condition).
+    - fetch records from [price](table1) where [sales](table2) [>40](condition).
+    - show all entries in [stock](table1) where [price](table2) [=1000](condition).
+    - list all [sales](table1) where [price](table2) [<3000](condition).
+    - display all [stock](table1) where [sales](table2) [>75](condition).
+    - find all [price](table1) records where [stock](table2) [=200](condition).
+    - extract all [sales](table1) where [price](table2) [=1500](condition).
+    - filter [stock](table1) where [price](table2) [=5000](condition).
+    - search [sales](table1) where [stock](table2) [>120](condition).
+    - lookup [price](table1) where [sales](table2) [<900](condition).
+    - get [stock](table1) where [price](table2) [=89.99](condition).
+    - list all records from [sales](table1) where [stock](table2) [=50](condition).
+    - fetch [price](table1) where [sales](table2) [=25](condition).
+    - retrieve all [stock](table1) where [sales](table2) [>10](condition).
+    - display [price](table1) where [stock](table2) [<75](condition).
+    - show data from [sales](table1) where [price](table2) [=499.50](condition).
+    - find all [stock](table1) with [price](table2) [>6500](condition).
+    - get [sales](table1) where [price](table2) [=4999](condition).
+    - fetch [stock](table1) where [sales](table2) [=30](condition).
+    - list all [price](table1) where [stock](table2) [=12](condition).
+    - extract [sales](table1) where [price](table2) [>1100](condition).
+    - display [stock](table1) where [price](table2) [<700](condition).
+    - find records from [sales](table1) where [stock](table2) [=250](condition).
+
+- lookup: condition
+  examples: |
+    - =100
+    - =45.78
+    - <=23.00
+    - <=34
+    - >=24.21
+    - >=30
+    - <23
+    - <45.67
+    - >34
+    - >24.90
+    
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
